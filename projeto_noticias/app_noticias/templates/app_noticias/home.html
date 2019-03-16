@@ -1,0 +1,14 @@
+<hi>Noticias</hi>
+{% for noticia in object_list %}
+	{% if noticia.publicado == True %}
+	| <div> {{ noticia.titulo}}
+	</div>
+<div>
+	
+	<h2>{{ noticia.titulo }}</h2>
+	<p>{{ noticia.conteudo | linebreaksbr }} </p>
+	
+	<br>
+</div>
+	{%endif%}
+{% endfor %}
